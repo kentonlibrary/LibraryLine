@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% if title %}
+		<title>Library Line - {{ title }}</title>
+	{% else %}
+		<title>Library Line</title>
+	{% endif %}
+	<style>
+		body {
+		  margin: 0;
+		}
+
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  width: 10%;
+		  background-color: #f1f1f1;
+		  position: fixed;
+		  height: 100%;
+		  overflow: auto;
+		}
+
+		li a {
+		  display: block;
+		  color: #000;
+		  padding: 8px 16px;
+		  text-decoration: none;
+		}
+
+		li a.active {
+		  background-color: #4CAF50;
+		  color: white;
+		}
+
+		li a:hover:not(.active) {
+		  background-color: #555;
+		  color: white;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+  <li><a href="/files">Files</a></li>
+  <li><a href="/buttons">Buttons</a></li>
+</ul>
+<div style="margin-left:10%;padding:1px 16px;height:1000px;">
+	{% block content %}{% endblock  %}
+</div>
+</body>
+</html>

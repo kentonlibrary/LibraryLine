@@ -1,0 +1,36 @@
+{% extends "phonesetup/base.html"  %}
+{% block content %}
+<h1>Button Program</h1>
+<table>
+	<tr>
+		<td>Button</td>
+		<td>File</td>
+	</tr>
+	{% for button in buttons %}
+	<form method="POST" action="">
+		{% csrf_token %}
+		<tr>
+			<td>{{button.button_name}}</td>
+			<td>
+				<input type='hidden' name='button_name' id="button_name" value="{{button.button_name}}">
+				<select name="file_name" id="file_name" onchange="this.form.submit()">
+					<option>Recording</option>
+					{% if button.file_name == NULL %}
+						<option selected>------</option>
+					{% endif %}
+					{% for file in files %}
+						{% if file != 'assets' %}
+							{% if button.file_name == file %}
+								<option selected>{{file}}</option>
+							{% else %}
+								<option>{{file}}</option>
+							{% endif %}
+						{% endif %}
+      		{% endfor %}
+				</select>
+			</td>
+		</tr>
+		</form>
+	{% endfor %}
+</table>
+{% endblock content %}

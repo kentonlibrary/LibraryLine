@@ -1,0 +1,39 @@
+{% extends "phonesetup/base.html"  %}
+{% load static %}
+{% block content %}
+<h1>Files on Drive</h1>
+<table>
+		<tr>
+			<form action="" method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<td></td>
+				<td>Upload: </td>
+				<td><input type="file" name="audioFile" id="audioFile"></td>
+				<td><input type="submit" name="submitFile" id="submitFile" value="Upload"></td>
+			</form>
+		</tr>
+			{% for file in files %}
+				{% if file != 'assets' %}
+				<tr>
+					<form method="POST" action="">
+						{% csrf_token %}
+						<input type="hidden" name="delete" id="delete" value="{{ file }}">
+						<td><input type="image" src="{% static 'phonesetup/assets/delete.png' %}" alt="delete" height="20px" onclick="this.form.submit()"></td>
+					</form>
+					<form method="POST" action="">
+						{% csrf_token %}
+						<input type='hidden' name="old" id="old" value="{{ file }}">
+						<td><input type="text" name="new" id="new" value="{{ file }}" onFocusOut="this.form.submit()"></td>
+						<td>
+							 <audio controls>
+								<source src="/media/{{ file }}" type="audio/wav">
+							</audio>
+						</td>
+						<td><a href="/media/{{ file }}" download>
+							<img src="{% static 'phonesetup/assets/download.png' %}" alt="delete" height="40px"></a></td>
+					</form>
+				</tr>
+				{% endif %}
+	    {% endfor %}
+</table>
+{% endblock content %}

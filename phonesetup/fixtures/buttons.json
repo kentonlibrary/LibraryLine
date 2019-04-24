@@ -1,0 +1,106 @@
+[
+  {
+    "model": "phoneSetup.Button",
+    "id": "1",
+    "fields": {
+      "button_name": "0",
+      "file_name": "buttonSound_0.wav"
+    }
+  },
+  {
+    "model": "phoneSetup.Button",
+    "id": "2",
+    "fields": {
+      "button_name": "1",
+      "file_name": "buttonSound_1.wav"
+    }
+  },
+  {
+    "model": "phoneSetup.Button",
+    "id": "3",
+    "fields": {
+      "button_name": "2",
+      "file_name": "buttonSound_2.wav"
+    }
+  },
+  {
+    "model": "phoneSetup.Button",
+    "id": "4",
+    "fields": {
+      "button_name": "3",
+      "file_name": "buttonSound_3.wav"
+    }
+  },
+  {
+    "model": "phoneSetup.Button",
+    "id": "5",
+    "fields": {
+      "button_name": "4",
+      "file_name": "buttonSound_4.wav"
+    }
+  },
+  {
+    "model": "phoneSetup.Button",
+    "id": "6",
+    "fields": {
+      "button_name": "5",
+      "file_name": "buttonSound_5.wav"
+    }
+  },
+  {
+    "model": "phoneSetup.Button",
+    "id": "7",
+    "fields": {
+      "button_name": "6",
+      "file_name": "buttonSound_6.wav"
+    }
+  },
+  {
+    "model": "phoneSetup.Button",
+    "id": "8",
+    "fields": {
+      "button_name": "7",
+      "file_name": "buttonSound_7.wav"
+    }
+  },
+  {
+    "model": "phoneSetup.Button",
+    "id": "9",
+    "fields": {
+      "button_name": "8",
+      "file_name": "buttonSound_8.wav"
+    }
+  },
+  {
+    "model": "phoneSetup.Button",
+    "id": "10",
+    "fields": {
+      "button_name": "9",
+      "file_name": "buttonSound_9.wav"
+    }
+  },
+  {
+    "model": "phoneSetup.Button",
+    "id": "11",
+    "fields": {
+      "button_name": "STAR",
+      "file_name": "buttonSound_STAR.wav"
+    }
+  },
+  {
+    "model": "phoneSetup.Button",
+    "id": "12",
+    "fields": {
+      "button_name": "POUND",
+      "file_name": "buttonSound_POUND.wav"
+    }
+  },
+  {
+    "model": "phoneSetup.Button",
+    "id": "13",
+    "fields": {
+      "button_name": "phone",
+      "file_name": "buttonSound_busy.wav"
+    }
+  }
+]
