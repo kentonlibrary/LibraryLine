@@ -7,7 +7,7 @@ from django.core.files.storage import FileSystemStorage
 
 
 def buttonUpdate(request): #Used to update which audio file plays on each button push
-	path="/share/mediaAssets/"
+	path="mediaAssets/"
 	file_list = sorted(os.listdir(path))
 	#Form submit data
 	if request.method == 'POST':
@@ -26,7 +26,7 @@ def buttonUpdate(request): #Used to update which audio file plays on each button
 	return render(request, 'phonesetup/button.html', context)
 
 def listFiles(request): # used to rename files
-	path="/share/mediaAssets/"
+	path="mediaAssets/"
 	file_list = sorted(os.listdir(path))
 
 	if 'old' in request.POST:
