@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 /share/dial.py
+python3 /LibraryLine/libraryLine/dial.py
