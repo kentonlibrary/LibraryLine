@@ -67,16 +67,16 @@ def keyPress(key):
 
     if(fileName == 'Recording'):
         if debug:
-            audioPlay = subprocess.Popen(['arecord', "/share/mediaAssets/" + str(time.time())[0:10] + str(time.time())[11:15]
+            audioPlay = subprocess.Popen(['arecord', "/LibraryLine/libraryLine/mediaAssets/" + str(time.time())[0:10] + str(time.time())[11:15]
 ])
         else:
-            audioPlay = subprocess.Popen(['arecord', "/share/mediaAssets/" + str(time.time())[0:10] + str(time.time())[11:15]
+            audioPlay = subprocess.Popen(['arecord', "/LibraryLine/libraryLine/mediaAssets/" + str(time.time())[0:10] + str(time.time())[11:15]
 ], stdout=FNULL, stderr=subprocess.STDOUT)
     else:
         if debug:
-            audioPlay = subprocess.Popen(["aplay", "/share/mediaAssets/" + fileName], stdout=FNULL, stderr=subprocess.STDOUT)
+            audioPlay = subprocess.Popen(["aplay", "/LibraryLine/libraryLine/mediaAssets/" + fileName], stdout=FNULL, stderr=subprocess.STDOUT)
         else:
-            audioPlay = subprocess.Popen(["aplay", "/share/mediaAssets/" + fileName])
+            audioPlay = subprocess.Popen(["aplay", "/LibraryLine/libraryLine/mediaAssets/" + fileName])
 ##############################
 #        Program Loop        #
 ##############################
@@ -103,17 +103,17 @@ try: #Needed for ctr + c to kill everything
             #Check if playing a sound or recording
             if(fileName == "Recording"):
                 if debug:
-                    audioPlay = subprocess.Popen(['arecord', "/share/mediaAssets/" + str(time.time())[0:10] + str(time.time())[11:15]
+                    audioPlay = subprocess.Popen(['arecord', "/LibraryLine/libraryLine/mediaAssets/" + str(time.time())[0:10] + str(time.time())[11:15]
 ])
                 else:
-                    audioPlay = subprocess.Popen(['arecord', "/share/mediaAssets/" + str(time.time())[0:10] + str(time.time())[11:15]
+                    audioPlay = subprocess.Popen(['arecord', "/LibraryLine/libraryLine/mediaAssets/" + str(time.time())[0:10] + str(time.time())[11:15]
 ], stdout=FNULL, stderr=subprocess.STDOUT)
             else:
             #Play the starting sound
                 if debug:
-                    audioPlay = subprocess.Popen(["aplay", "/share/mediaAssets/" + fileName])
+                    audioPlay = subprocess.Popen(["aplay", "/LibraryLine/libraryLine/mediaAssets/" + fileName])
                 else:
-                    audioPlay = subprocess.Popen(["aplay", "/share/mediaAssets/" + fileName], stdout=FNULL, stderr=subprocess.STDOUT)
+                    audioPlay = subprocess.Popen(["aplay", "/LibraryLine/libraryLine/mediaAssets/" + fileName], stdout=FNULL, stderr=subprocess.STDOUT)
 
             keypad.registerKeyPressHandler(keyPress)
             while(phone_off_hook):
