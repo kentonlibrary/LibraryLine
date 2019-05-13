@@ -14,7 +14,7 @@ from time import sleep
 #Used for generating files names
 import time
 
-from dialsettings import dbusername, dbpassword, location, jasperURL
+from settings import dbusername, dbpassword, location, jasperURL
 ######## Set Variables ########
 debug = False
 ###############################
